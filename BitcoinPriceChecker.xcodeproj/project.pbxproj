@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C279D9021EF70180017CF7B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C279D8F21EF70180017CF7B /* Alamofire.framework */; };
 		7CE4F88621ECEF69008CD6AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE4F88521ECEF69008CD6AD /* AppDelegate.swift */; };
 		7CE4F88821ECEF69008CD6AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE4F88721ECEF69008CD6AD /* ViewController.swift */; };
 		7CE4F88B21ECEF69008CD6AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CE4F88921ECEF69008CD6AD /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		2BD44612B14B7542A1D5C063 /* Pods-BitcoinPriceCheckerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinPriceCheckerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinPriceCheckerUITests/Pods-BitcoinPriceCheckerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		40AFEEDA5574D9D46C2B2B15 /* Pods-BitcoinPriceCheckerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinPriceCheckerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinPriceCheckerTests/Pods-BitcoinPriceCheckerTests.release.xcconfig"; sourceTree = "<group>"; };
 		4265376B5D397F7AD6FA27DE /* Pods-BitcoinPriceCheckerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinPriceCheckerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinPriceCheckerUITests/Pods-BitcoinPriceCheckerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7C279D8F21EF70180017CF7B /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CE4F88221ECEF69008CD6AD /* BitcoinPriceChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitcoinPriceChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CE4F88521ECEF69008CD6AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CE4F88721ECEF69008CD6AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C279D9021EF70180017CF7B /* Alamofire.framework in Frameworks */,
 				A4C39082584E836A5919A771 /* Pods_BitcoinPriceChecker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,6 +161,7 @@
 		F89D65C5215FBA1C01E7C380 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C279D8F21EF70180017CF7B /* Alamofire.framework */,
 				B3B9401C0273CE75BF7FC33C /* Pods_BitcoinPriceChecker.framework */,
 				D6D6FF056A8822BDD08B4A87 /* Pods_BitcoinPriceCheckerTests.framework */,
 				F7EB4D05C953D02CC8978CEE /* Pods_BitcoinPriceCheckerUITests.framework */,
@@ -641,7 +645,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9KDPSC6W9G;
 				INFOPLIST_FILE = BitcoinPriceChecker/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Suto.Kotaro.BitcoinPriceChecker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -657,7 +664,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9KDPSC6W9G;
 				INFOPLIST_FILE = BitcoinPriceChecker/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Suto.Kotaro.BitcoinPriceChecker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -674,7 +684,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9KDPSC6W9G;
 				INFOPLIST_FILE = BitcoinPriceCheckerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Suto.Kotaro.BitcoinPriceCheckerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -692,7 +706,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9KDPSC6W9G;
 				INFOPLIST_FILE = BitcoinPriceCheckerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Suto.Kotaro.BitcoinPriceCheckerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -709,7 +727,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9KDPSC6W9G;
 				INFOPLIST_FILE = BitcoinPriceCheckerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Suto.Kotaro.BitcoinPriceCheckerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -726,7 +748,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9KDPSC6W9G;
 				INFOPLIST_FILE = BitcoinPriceCheckerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Suto.Kotaro.BitcoinPriceCheckerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
