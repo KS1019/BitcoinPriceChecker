@@ -3,11 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7C279D9021EF70180017CF7B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C279D8F21EF70180017CF7B /* Alamofire.framework */; };
+		7C983F21265AC2D8000AFB05 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7C983F20265AC2D8000AFB05 /* Alamofire */; };
+		7C983F47265AC706000AFB05 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7C983F46265AC706000AFB05 /* RxSwift */; };
+		7C983F49265AC706000AFB05 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 7C983F48265AC706000AFB05 /* RxCocoa */; };
+		7C983F4B265AC706000AFB05 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 7C983F4A265AC706000AFB05 /* RxRelay */; };
 		7CE4F88621ECEF69008CD6AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE4F88521ECEF69008CD6AD /* AppDelegate.swift */; };
 		7CE4F88821ECEF69008CD6AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE4F88721ECEF69008CD6AD /* ViewController.swift */; };
 		7CE4F88B21ECEF69008CD6AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CE4F88921ECEF69008CD6AD /* Main.storyboard */; };
@@ -16,7 +19,6 @@
 		7CE4F89B21ECEF6D008CD6AD /* BitcoinPriceCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE4F89A21ECEF6D008CD6AD /* BitcoinPriceCheckerTests.swift */; };
 		7CE4F8A621ECEF6D008CD6AD /* BitcoinPriceCheckerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE4F8A521ECEF6D008CD6AD /* BitcoinPriceCheckerUITests.swift */; };
 		A1B457FCD4996C6BF20BEF92 /* Pods_BitcoinPriceCheckerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6D6FF056A8822BDD08B4A87 /* Pods_BitcoinPriceCheckerTests.framework */; };
-		A4C39082584E836A5919A771 /* Pods_BitcoinPriceChecker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B9401C0273CE75BF7FC33C /* Pods_BitcoinPriceChecker.framework */; };
 		CB0DDFA4AFEB5068174811CE /* Pods_BitcoinPriceCheckerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7EB4D05C953D02CC8978CEE /* Pods_BitcoinPriceCheckerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,11 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		09260FF94FCC962F2E42E6B0 /* Pods-BitcoinPriceChecker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinPriceChecker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinPriceChecker/Pods-BitcoinPriceChecker.debug.xcconfig"; sourceTree = "<group>"; };
-		23E583026F64460F8C4C7154 /* Pods-BitcoinPriceCheckerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinPriceCheckerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinPriceCheckerTests/Pods-BitcoinPriceCheckerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		2BD44612B14B7542A1D5C063 /* Pods-BitcoinPriceCheckerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinPriceCheckerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinPriceCheckerUITests/Pods-BitcoinPriceCheckerUITests.release.xcconfig"; sourceTree = "<group>"; };
-		40AFEEDA5574D9D46C2B2B15 /* Pods-BitcoinPriceCheckerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinPriceCheckerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinPriceCheckerTests/Pods-BitcoinPriceCheckerTests.release.xcconfig"; sourceTree = "<group>"; };
-		4265376B5D397F7AD6FA27DE /* Pods-BitcoinPriceCheckerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinPriceCheckerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinPriceCheckerUITests/Pods-BitcoinPriceCheckerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7C279D8F21EF70180017CF7B /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CE4F88221ECEF69008CD6AD /* BitcoinPriceChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitcoinPriceChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CE4F88521ECEF69008CD6AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,7 +57,6 @@
 		B3B9401C0273CE75BF7FC33C /* Pods_BitcoinPriceChecker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitcoinPriceChecker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D6FF056A8822BDD08B4A87 /* Pods_BitcoinPriceCheckerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitcoinPriceCheckerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7EB4D05C953D02CC8978CEE /* Pods_BitcoinPriceCheckerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitcoinPriceCheckerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8D6B7A8909230371B27CA7B /* Pods-BitcoinPriceChecker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinPriceChecker.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinPriceChecker/Pods-BitcoinPriceChecker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +64,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C279D9021EF70180017CF7B /* Alamofire.framework in Frameworks */,
-				A4C39082584E836A5919A771 /* Pods_BitcoinPriceChecker.framework in Frameworks */,
+				7C983F49265AC706000AFB05 /* RxCocoa in Frameworks */,
+				7C983F47265AC706000AFB05 /* RxSwift in Frameworks */,
+				7C983F4B265AC706000AFB05 /* RxRelay in Frameworks */,
+				7C983F21265AC2D8000AFB05 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +97,6 @@
 				7CE4F89921ECEF6D008CD6AD /* BitcoinPriceCheckerTests */,
 				7CE4F8A421ECEF6D008CD6AD /* BitcoinPriceCheckerUITests */,
 				7CE4F88321ECEF69008CD6AD /* Products */,
-				A3C488418B037FAE2A687B7A /* Pods */,
 				F89D65C5215FBA1C01E7C380 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -145,19 +142,6 @@
 			path = BitcoinPriceCheckerUITests;
 			sourceTree = "<group>";
 		};
-		A3C488418B037FAE2A687B7A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				09260FF94FCC962F2E42E6B0 /* Pods-BitcoinPriceChecker.debug.xcconfig */,
-				F8D6B7A8909230371B27CA7B /* Pods-BitcoinPriceChecker.release.xcconfig */,
-				23E583026F64460F8C4C7154 /* Pods-BitcoinPriceCheckerTests.debug.xcconfig */,
-				40AFEEDA5574D9D46C2B2B15 /* Pods-BitcoinPriceCheckerTests.release.xcconfig */,
-				4265376B5D397F7AD6FA27DE /* Pods-BitcoinPriceCheckerUITests.debug.xcconfig */,
-				2BD44612B14B7542A1D5C063 /* Pods-BitcoinPriceCheckerUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		F89D65C5215FBA1C01E7C380 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,18 +160,21 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CE4F8AA21ECEF6D008CD6AD /* Build configuration list for PBXNativeTarget "BitcoinPriceChecker" */;
 			buildPhases = (
-				1B813D1B642EB03D2E3903AF /* [CP] Check Pods Manifest.lock */,
 				7CE4F87E21ECEF69008CD6AD /* Sources */,
 				7CE4F87F21ECEF69008CD6AD /* Frameworks */,
 				7CE4F88021ECEF69008CD6AD /* Resources */,
-				55778EB962C5DF08C50A8053 /* [CP] Embed Pods Frameworks */,
-				C9F1A6B87C83F592036CA961 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = BitcoinPriceChecker;
+			packageProductDependencies = (
+				7C983F20265AC2D8000AFB05 /* Alamofire */,
+				7C983F46265AC706000AFB05 /* RxSwift */,
+				7C983F48265AC706000AFB05 /* RxCocoa */,
+				7C983F4A265AC706000AFB05 /* RxRelay */,
+			);
 			productName = BitcoinPriceChecker;
 			productReference = 7CE4F88221ECEF69008CD6AD /* BitcoinPriceChecker.app */;
 			productType = "com.apple.product-type.application";
@@ -266,6 +253,10 @@
 				Base,
 			);
 			mainGroup = 7CE4F87921ECEF69008CD6AD;
+			packageReferences = (
+				7C983F1F265AC2D8000AFB05 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				7C983F45265AC706000AFB05 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 7CE4F88321ECEF69008CD6AD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -320,24 +311,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitcoinPriceCheckerUITests/Pods-BitcoinPriceCheckerUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1B813D1B642EB03D2E3903AF /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BitcoinPriceChecker-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		532BA039213CC127DFCD5F55 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -354,30 +327,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		55778EB962C5DF08C50A8053 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BitcoinPriceChecker/Pods-BitcoinPriceChecker-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitcoinPriceChecker/Pods-BitcoinPriceChecker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		92D963612259FDAD3C95AAF6 /* [CP] Embed Pods Frameworks */ = {
@@ -423,21 +372,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitcoinPriceCheckerTests/Pods-BitcoinPriceCheckerTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C9F1A6B87C83F592036CA961 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitcoinPriceChecker/Pods-BitcoinPriceChecker-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FBCD8324A8A11CAE1E4FA5F7 /* [CP] Check Pods Manifest.lock */ = {
@@ -639,11 +573,10 @@
 		};
 		7CE4F8AB21ECEF6D008CD6AD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 09260FF94FCC962F2E42E6B0 /* Pods-BitcoinPriceChecker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9KDPSC6W9G;
+				DEVELOPMENT_TEAM = 47JGA6NAP2;
 				INFOPLIST_FILE = BitcoinPriceChecker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -658,11 +591,10 @@
 		};
 		7CE4F8AC21ECEF6D008CD6AD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8D6B7A8909230371B27CA7B /* Pods-BitcoinPriceChecker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9KDPSC6W9G;
+				DEVELOPMENT_TEAM = 47JGA6NAP2;
 				INFOPLIST_FILE = BitcoinPriceChecker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -677,7 +609,6 @@
 		};
 		7CE4F8AE21ECEF6D008CD6AD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23E583026F64460F8C4C7154 /* Pods-BitcoinPriceCheckerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -699,7 +630,6 @@
 		};
 		7CE4F8AF21ECEF6D008CD6AD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40AFEEDA5574D9D46C2B2B15 /* Pods-BitcoinPriceCheckerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -721,7 +651,6 @@
 		};
 		7CE4F8B121ECEF6D008CD6AD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4265376B5D397F7AD6FA27DE /* Pods-BitcoinPriceCheckerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -742,7 +671,6 @@
 		};
 		7CE4F8B221ECEF6D008CD6AD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2BD44612B14B7542A1D5C063 /* Pods-BitcoinPriceCheckerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -801,6 +729,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7C983F1F265AC2D8000AFB05 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+		7C983F45265AC706000AFB05 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 6.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7C983F20265AC2D8000AFB05 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C983F1F265AC2D8000AFB05 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		7C983F46265AC706000AFB05 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C983F45265AC706000AFB05 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		7C983F48265AC706000AFB05 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C983F45265AC706000AFB05 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		7C983F4A265AC706000AFB05 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C983F45265AC706000AFB05 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7CE4F87A21ECEF69008CD6AD /* Project object */;
 }

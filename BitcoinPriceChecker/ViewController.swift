@@ -17,14 +17,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var curPriceLabel: UILabel!
     @IBOutlet weak var detailsTextView: UITextView!
  
-    var priceListStr: Variable<String>!
-    var currentPriceStr: Variable<String>!
-    var priceArray: Variable<[Int]>!
+    var priceListStr: BehaviorRelay<String>!
+    var currentPriceStr: BehaviorRelay<String>!
+    var priceArray: BehaviorRelay<[Int]>!
     let dispose = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        priceArray = Variable([])
+        priceArray = BehaviorRelay(value: [])
         _ = priceArray
             .asObservable()
             .map { arr in
@@ -46,13 +46,13 @@ class ViewController: UIViewController {
             .bind(to: statusLabel.rx.text)
             .disposed(by: dispose)
         
-        priceListStr = Variable("")
+      priceListStr = BehaviorRelay(value: "")
         _ = priceListStr
             .asObservable()
             .bind(to: detailsTextView.rx.text)
             .disposed(by: dispose)
 
-        currentPriceStr = Variable("")
+      currentPriceStr = BehaviorRelay(value: "")
         _ = currentPriceStr
             .asObservable()
             .bind(to: curPriceLabel.rx.text)
@@ -63,7 +63,7 @@ class ViewController: UIViewController {
     
     func getPrice() {
         AF.request("https://api.bitflyer.com/v1/getboard").responseData { response in
-            if let json = response.result.value {
+          if case .success(let json) = response.result {
                 print("JSON: \(json)")
                 do {
                     let decoder = JSONDecoder()
@@ -71,11 +71,10 @@ class ViewController: UIViewController {
                     print("\(self.getDateStr()): ¥\(boardInfo.mid_price)")
                     var i = self.priceArray.value
                     i.append(boardInfo.mid_price)
-                    self.priceArray.value = i
+                    self.priceArray.accept(i)
                     print(self.priceArray.value)
-                    self.currentPriceStr.value = "\(self.getDateStr()): ¥\(boardInfo.mid_price)"
-                    self.priceListStr.value = "\(self.getDateStr()): ¥\(boardInfo.mid_price)\n" + self.priceListStr.value
-                    //print("c:\(self.currentPriceStr.value)\nl:\(self.priceListStr.value)")
+                    self.currentPriceStr.accept("\(self.getDateStr()): ¥\(boardInfo.mid_price)")
+                    self.priceListStr.accept( "\(self.getDateStr()): ¥\(boardInfo.mid_price)\n" + self.priceListStr.value)
                 } catch {
                     print("Failed")
                 }
