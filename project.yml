@@ -8,7 +8,13 @@ packages:
   RxSwift:
     url: https://github.com/ReactiveX/RxSwift
     exactVersion: 6.2.0
-
+fileGroups:
+  - .github
+  - Dangerfile.swift
+  - project.yml
+  - README.md
+  - LICENSE.md
+  - .gitignore
 targets:
   BitcoinPriceChecker:
     platform: iOS
