@@ -7,74 +7,62 @@
 //
 
 import UIKit
-import RxCocoa
-import RxSwift
 import Alamofire
+import Combine
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var curPriceLabel: UILabel!
     @IBOutlet weak var detailsTextView: UITextView!
- 
-    var priceListStr: BehaviorRelay<String>!
-    var currentPriceStr: BehaviorRelay<String>!
-    var priceArray: BehaviorRelay<[Int]>!
-    let dispose = DisposeBag()
+    
+    @Published var priceListStr: String = ""
+    @Published var currentPriceStr: String = ""
+    @Published var priceArray: [Int] = []
+    var cancellables = Set<AnyCancellable>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        priceArray = BehaviorRelay(value: [])
-        _ = priceArray
-            .asObservable()
+        statusLabel.text = "No Data"
+        
+        $priceArray
+            .filter {
+                $0.count >= 2
+            }
             .map { arr in
-                print("arr:\(arr)")
-                if arr.count > 1 {
-                    if arr.reversed().first! > arr.reversed()[1] {
-                        return "Up"
-                    } else if arr.reversed().first! < arr.reversed()[1] {
-                        return "Down"
-                    } else if arr.reversed().first! == arr.reversed()[1] {
-                        return "Same Price"
-                    } else {
-                        return "No Data"
-                    }
+                if arr.reversed().first! > arr.reversed()[1] {
+                    return "Up"
+                } else if arr.reversed().first! < arr.reversed()[1] {
+                    return "Down"
                 } else {
-                    return "No Data"
+                    return "Same Price"
                 }
             }
-            .bind(to: statusLabel.rx.text)
-            .disposed(by: dispose)
+            .assign(to: \.text, on: statusLabel)
+            .store(in: &cancellables)
         
-      priceListStr = BehaviorRelay(value: "")
-        _ = priceListStr
-            .asObservable()
-            .bind(to: detailsTextView.rx.text)
-            .disposed(by: dispose)
-
-      currentPriceStr = BehaviorRelay(value: "")
-        _ = currentPriceStr
-            .asObservable()
-            .bind(to: curPriceLabel.rx.text)
-            .disposed(by: dispose)
+        $priceListStr
+            .assign(to: \.text, on: detailsTextView)
+            .store(in: &cancellables)
+        
+        $currentPriceStr
+            .sink { str in
+                self.curPriceLabel.text = str
+            }
+            .store(in: &cancellables)
         
         getPrice()
     }
     
     func getPrice() {
         AF.request("https://api.bitflyer.com/v1/getboard").responseData { response in
-          if case .success(let json) = response.result {
-                print("JSON: \(json)")
+            if case .success(let json) = response.result {
                 do {
                     let decoder = JSONDecoder()
                     let boardInfo = try decoder.decode(BoardInfo.self, from: json)
-                    print("\(self.getDateStr()): ¥\(boardInfo.mid_price)")
-                    var i = self.priceArray.value
-                    i.append(boardInfo.mid_price)
-                    self.priceArray.accept(i)
-                    print(self.priceArray.value)
-                    self.currentPriceStr.accept("\(self.getDateStr()): ¥\(boardInfo.mid_price)")
-                    self.priceListStr.accept( "\(self.getDateStr()): ¥\(boardInfo.mid_price)\n" + self.priceListStr.value)
+                    self.priceArray.append(boardInfo.mid_price)
+                    self.currentPriceStr = "\(self.getDateStr()): ¥\(boardInfo.mid_price)"
+                    self.priceListStr = "\(self.getDateStr()): ¥\(boardInfo.mid_price)\n" + self.priceListStr
                 } catch {
                     print("Failed")
                 }
@@ -99,6 +87,5 @@ class ViewController: UIViewController {
 
 struct BoardInfo: Codable {
     var mid_price: Int
-    
 }
 
