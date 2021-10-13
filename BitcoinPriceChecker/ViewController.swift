@@ -86,7 +86,7 @@ class ViewController: UIViewController {
 }
 
 struct BoardInfo: Codable {
-    // swiftlint: disable identifier_name
+    // swiftlint:disable identifier_name
     var mid_price: Int
 }
 
