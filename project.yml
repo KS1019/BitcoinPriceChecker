@@ -5,9 +5,6 @@ packages:
   Alamofire:
     url: https://github.com/Alamofire/Alamofire
     exactVersion: 5.4.3
-  RxSwift:
-    url: https://github.com/ReactiveX/RxSwift
-    exactVersion: 6.2.0
 fileGroups:
   - .github
   - Dangerfile.swift
@@ -23,11 +20,6 @@ targets:
       - BitcoinPriceChecker
     dependencies:
       - package: Alamofire
-      - package: RxSwift
-      - package: RxSwift
-        product: RxRelay
-      - package: RxSwift
-        product: RxCocoa
   BitcoinPriceCheckerTests:
     platform: iOS
     type: bundle.unit-test
