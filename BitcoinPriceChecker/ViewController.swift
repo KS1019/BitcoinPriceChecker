@@ -74,18 +74,19 @@ class ViewController: UIViewController {
     }
     
     func getDateStr() -> String {
-        let f = DateFormatter()
-        f.timeStyle = .medium
-        f.dateStyle = .medium
-        f.locale = Locale(identifier: "ja_JP")
+        let formatter = DateFormatter()
+        formatter.timeStyle = .medium
+        formatter.dateStyle = .medium
+        formatter.locale = Locale(identifier: "ja_JP")
         let now = Date()
-        return f.string(from: now)
+        return formatter.string(from: now)
     }
     
     
 }
 
 struct BoardInfo: Codable {
+    // swiftlint: disable identifier_name
     var mid_price: Int
 }
 
