@@ -7,3 +7,6 @@ This is a repository where I do technical experiments with new frameworks etc.
 - [ ] Use XCUITest on GitHub Actions.
 - [ ] Use swift-doc
 - [ ] Run SwiftyProfiler on PR
+
+# LICENSE
+It is licensed under MIT license.
