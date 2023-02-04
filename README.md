@@ -1,5 +1,5 @@
 # About
-This is a repository where I do experiments with new frameworks etc.
+This is a repository where I do technical experiments with new frameworks etc. 
 
 # TODOs
 - [x] Use XcodeGen to generate .xcodeproj. ([#2](https://github.com/KS1019/BitcoinPriceChecker/pull/2))
