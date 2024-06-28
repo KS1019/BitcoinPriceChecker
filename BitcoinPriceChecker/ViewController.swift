@@ -56,7 +56,7 @@ class ViewController: UIViewController {
     func getPrice() {
         let bitflyerAPI = URL(string: "https://api.bitflyer.com/")!
         let task =
-        URLSession.shared.dataTask(with: bitflyerAPI.appending(components: "v1","getboard")) { data, res, err in
+        URLSession.shared.dataTask(with: bitflyerAPI.appending(components: "v1", "getboard")) { data, _, err in
             if let err {
                 print("Failed with \(err)")
                 return
@@ -85,11 +85,9 @@ class ViewController: UIViewController {
         return formatter.string(from: now)
     }
 
-
 }
 
 struct BoardInfo: Codable {
     // swiftlint:disable identifier_name
     var mid_price: Int
 }
-
