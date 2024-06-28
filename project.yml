@@ -1,10 +1,6 @@
 name: BitcoinPriceChecker
 options:
   bundleIdPrefix: Suto.Kotaro
-packages:
-  Alamofire:
-    url: https://github.com/Alamofire/Alamofire
-    exactVersion: 5.4.3
 fileGroups:
   - .github
   - Dangerfile.swift
@@ -18,8 +14,6 @@ targets:
     type: application
     sources:
       - BitcoinPriceChecker
-    dependencies:
-      - package: Alamofire
   BitcoinPriceCheckerTests:
     platform: iOS
     type: bundle.unit-test
