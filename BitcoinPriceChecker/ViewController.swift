@@ -61,7 +61,7 @@ class ViewController: UIViewController {
                 print("Failed with \(err)")
                 return
             }
-            guard let data, let res else { return }
+            guard let data else { return }
             let decoder = JSONDecoder()
             let boardInfo = try! decoder.decode(BoardInfo.self, from: data)
             DispatchQueue.main.sync {
